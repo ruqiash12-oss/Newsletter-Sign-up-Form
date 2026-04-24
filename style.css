@@ -1,0 +1,276 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: auto;
+  padding: 24px;
+  background-color: hsl(234, 29%, 20%);
+  font-family: "Roboto", sans-serif;
+}
+
+.main{
+  background-color: white;
+  padding: 1rem;
+  border-radius: 30px;
+  text-align: center;
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.main.hidden{
+  display: none;
+}
+
+.signup{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin: 0 20px;
+}
+
+.main h1{
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: hsl(234, 29%, 20%);
+  font-weight: 700;
+}
+
+.main p{
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+li{
+  list-style: none;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+li img{
+  margin-right: 10px;
+  width: 20px;
+  height: auto;
+}
+
+#signup-form{
+  margin-top: 40px;
+}
+
+#label-row{
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#label-row label {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#label-row #error-msg{
+  color: hsl(0, 100%, 63%);
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+#email{
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+
+.btn, .dismiss-btn{
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 700;
+  color: white;
+  font-size: 0.875rem;
+  background-color: hsl(234, 29%, 20%);
+}
+
+.btn:hover,
+.dismiss-btn:hover{
+  background-color: hsl(4, 100%, 57%);
+  box-shadow: 0 5px 15px rgba(249, 3, 3, 0.925);
+  cursor: pointer;
+}
+
+#email.error{
+  border: 1px solid hsl(0, 100%, 63%);
+}
+
+.success-message{
+  display: none;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 30px;
+  text-align: left;
+  width: 370px;
+  max-width: 100%;
+  justify-content: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.success-message img{
+  width: 60px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.success-message h1{
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: hsl(234, 29%, 20%);
+  font-weight: 700;
+}
+
+.success-message p{
+  font-size: 0.8rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.success-message.hidden{
+  display: block;
+}
+
+.attribution { 
+  font-size: 0.6875rem;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  color: white;
+}
+
+.attribution a { 
+  color: hsl(0, 100%, 63%);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1439px) {
+  body{
+    padding: 0;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  .main{
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  picture{
+    width: 100%;
+  }
+
+  picture img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+  }
+
+  .signup{
+    margin: 0;
+    padding: 32px 24px;
+  }
+
+  .main h1{
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+  }
+
+  #signup-form{
+    margin-top: 24px;
+  }
+
+  .success-message{
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 32px 24px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .signup{
+    padding: 24px;
+  }
+
+  .success-message{
+    padding: 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body{
+    padding: 24px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main{
+    flex-direction: row;
+    width: 100%;
+    max-width: 850px;
+    padding: 1.5rem;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .main h1{
+    font-size: 3rem;
+  }
+
+  picture{
+    order: 2;
+  }
+
+  picture img {
+    margin: 0;
+    width: 350px;
+    height: auto;
+  }
+
+  .signup{
+    margin: 0 40px;
+    padding: 0;
+  }
+
+  .success-message{
+    width: 370px;
+    max-width: 100%;
+    min-height: auto;
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+}
